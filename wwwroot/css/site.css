@@ -16,6 +16,12 @@ app {
     align-items: center;
 }
 
+.navbar {
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
 .main {
     flex: 1;
 }
@@ -178,14 +184,48 @@ app {
 }
 
 @media (max-width: 767.98px) {
-    .main .top-row {
+    /* .main .top-row {
         display: none;
+    } */
+    .nav-links {
+        display: none;
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .nav-ul{
+        margin-right: auto !important;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        list-style: none;
+        margin-top: 0px;
+        box-sizing: border-box;
     }
 }
 
 @media (min-width: 768px) {
     app {
         flex-direction: row;
+    }
+
+    .nav-links {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box;
+    }
+
+    .nav-ul{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        list-style: none;
+        margin-top: 0px;
+        box-sizing: border-box;
     }
 
     .sidebar {
