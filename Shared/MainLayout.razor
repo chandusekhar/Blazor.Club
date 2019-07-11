@@ -1,29 +1,29 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="main">
-    <div class="navbar top-row">
+    <div class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" onclick="@ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="nav-links">
+        <div class="@NavMenuCssClass">
             <ul class="nav-ul">
-                <li class="nav-item px-3 py-0">
-                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <li class="nav-item">
+                    <NavLink class="nav-link py-0" href="" Match="NavLinkMatch.All">
                         首页
                     </NavLink>
                 </li>
-                <li class="nav-item px-3 py-0">
-                    <NavLink class="nav-link" href="counter">
+                <li class="nav-item">
+                    <NavLink class="nav-link py-0" href="counter">
                         博客
                     </NavLink>
                 </li>
-                <li class="nav-item px-3 py-0">
-                    <NavLink class="nav-link" href="fetchdata">
+                <li class="nav-item">
+                    <NavLink class="nav-link py-0" href="fetchdata">
                         问答
                     </NavLink>
                 </li>
-                <li class="nav-item px-3 py-0">
-                    <NavLink class="nav-link" href="about">
+                <li class="nav-item">
+                    <NavLink class="nav-link py-0" href="about">
                         关于我们
                     </NavLink>
                 </li>
@@ -37,11 +37,11 @@
 </div>
 
 @code {
-    bool collapseNavMenu = true;
+    private bool collapseNavMenu = true;
 
-    string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private string NavMenuCssClass => collapseNavMenu ? "nav-links" : "nav-links show";
 
-    void ToggleNavMenu()
+    private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
     }
