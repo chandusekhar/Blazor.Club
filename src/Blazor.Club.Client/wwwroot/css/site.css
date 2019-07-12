@@ -10,16 +10,11 @@ app {
     flex-direction: column;
 }
 
-.top-row {
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
-}
-
 .navbar {
-    height: 3.5rem;
+    height: 3rem;
     display: flex;
     align-items: center;
+    background: rgb(112,20,232);
 }
 
 .main {
@@ -37,41 +32,9 @@ app {
         padding-top: 0
     }
 
-/* .sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
-}
-
-    .sidebar .top-row {
-        background-color: rgba(0,0,0,0.4);
-    }
-
-    .sidebar .navbar-brand {
-        font-size: 1.1rem;
-    }
-
-    .sidebar .oi {
-        width: 2rem;
-        font-size: 1.1rem;
-        vertical-align: text-top;
-        top: -2px;
-    } */
-
-/* .nav-item {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
-}
-
-    .nav-item:first-of-type {
-        padding-top: 1rem;
-    }
-
-    .nav-item:last-of-type {
-        padding-bottom: 1rem;
-    } */
-
     .nav-item a {
         color: #d7d7d7;
-        border-radius: 4px;
+        border-radius: 0;
         height: 3rem;
         display: flex;
         align-items: center;
@@ -129,6 +92,37 @@ app {
         margin-bottom: 20px;
     }
 
+.container {
+    padding: 0 20px;
+}
+
+.img-bordered {
+    border: 1px solid #ccc;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-responsive-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swim-gray {
+    background: #f0f0f0;
+}
+
+.pb-60 {
+    padding-bottom: 60px;
+}
+
+.pt-60 {
+    padding-top: 60px;
+}
+
 .btn-white {
     color: #512bd4;
     background-color: #fff;
@@ -168,7 +162,7 @@ app {
 }
 
 .navbar-toggler {
-    background-color: black;
+    background-color: rgb(112, 20, 232);
 }
 
 .valid.modified:not([type=checkbox]) {
@@ -192,7 +186,6 @@ app {
         flex-grow: 1;
         align-items: center;
         box-sizing: border-box;
-        background: white;
         opacity: 0.9;
     }
 
@@ -240,22 +233,10 @@ app {
         padding-right: 1rem;
     }
 
-    .sidebar {
-        width: 250px;
-        height: 100vh;
-        position: sticky;
-        top: 0;
-    }
-
-    .main .top-row {
-        position: sticky;
-        top: 0;
-    }
-
-    /* .main > div {
+    .main > div {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
-    } */
+    }
 
     .navbar-toggler {
         display: none;
@@ -263,11 +244,8 @@ app {
 
     .container {
         width: 740px;
-    }
-
-    .sidebar .collapse {
-        /* Never collapse the sidebar for wide screens */
-        display: block;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .btn {
@@ -279,5 +257,26 @@ app {
         -ms-transform: scale(1.1);
         -o-transform: scale(1.1);
         transform: scale(1.1);
+    }
+
+    .col-sm-6 {
+        width: 50%;
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1160px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1380px;
     }
 }

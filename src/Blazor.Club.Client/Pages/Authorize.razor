@@ -1,0 +1,22 @@
+@page "/authorize"
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<AuthorizeView AuthenticationState="@AuthenticationState">
+    <Authorizing>
+        <text>Authoring...</text>
+    </Authorizing>
+    <Authorized>
+            <text>Authored</text>
+        </Authorized>
+        <NotAuthorized>
+            <text>NotAuthorized</text>
+        </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private Task<AuthenticationState> AuthenticationState { get; set; } 
+    protected override void OnInit(){
+        AuthenticationState= AuthenticationStateProvider
+            .GetAuthenticationStateAsync();
+    }
+}
