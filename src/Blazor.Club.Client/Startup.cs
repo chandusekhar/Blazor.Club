@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Blazor.Club.Data;
+using Microsoft.AspNetCore.Components;
+using Blazor.Club.Data.Service.Authorize;
 
 namespace Blazor.Club
 {
@@ -21,6 +23,8 @@ namespace Blazor.Club
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            services.AddAuthorizationCore();
+            services.AddScoped<AuthenticationStateProvider, ClubAuthenticationStateProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
