@@ -1,0 +1,7 @@
+﻿namespace Blazor.Club.Roles.Dto
+{
+    public class GetRolesInput
+    {
+        public string Permission { get; set; }
+    }
+}
